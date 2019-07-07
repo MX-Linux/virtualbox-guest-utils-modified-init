@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# preinst script for virtualbox-guest-utils-modified-init
+
+#set -e
+
+case "$1" in
+  install|upgrade) dpkg-divert --quiet                                               \
+                               --add                                                 \
+                               --package virtualbox-guest-utils-modified-init            \
+                               --rename                              \
+                               --divert /etc/init.d/virtualbox-guest-utils.dpkg-distrib \
+                               /etc/init.d/virtualbox-guest-utils
+                   ;;
+
+                *) :
+                   ;;
+esac 
+
+exit 0

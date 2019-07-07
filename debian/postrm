@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# postrm script for virtualbox-guest-utils-modified-init
+
+#set -e
+
+case "$1" in
+  purge|remove) dpkg-divert --quiet                                               \
+                            --remove                                              \
+                            --package virtualbox-guest-utils-modified-init               \
+                            --rename       \
+                            --divert /etc/init.d/virtualbox-guest-utils.dpkg-distrib \
+                            /etc/init.d/virtualbox-guest-utils
+                ;;
+
+             *) :
+                ;;
+esac 
+
+exit 0
