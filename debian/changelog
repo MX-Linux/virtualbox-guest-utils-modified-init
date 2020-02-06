@@ -1,3 +1,9 @@
+virtualbox-guest-utils-modified-init (20.02.02) mx; urgency=medium
+
+  * update for later VB releases 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 06 Feb 2020 17:55:21 -0500
+
 virtualbox-guest-utils-modified-init (19.07.01) mx; urgency=medium
 
   * Initial release.
