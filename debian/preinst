@@ -6,6 +6,10 @@
 
 #set -e
 
+if [ -e /etc/init.d/virtualbox-guest-utils ]; then
+    mv /etc/init.d/virtualbox-guest-utils /etc/init.d/virtualbox-guest-utils-VB_MOD.dpkg-distrib
+fi
+
 case "$1" in
   install|upgrade) dpkg-divert --quiet                                               \
                                --add                                                 \

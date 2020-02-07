@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# postint script for virtualbox-guest-utils-modified-init
+
+#set -e
+
+case "$1" in
+  install|upgrade|configure) cp /usr/share/vb-modified-init/virtualbox-guest-utils /etc/init.d/virtualbox-guest-utils
+                   ;;
+
+                *) :
+                   ;;
+esac 
+
+exit 0
