@@ -7,7 +7,7 @@
 #set -e
 
 if [ -e /etc/init.d/virtualbox-guest-utils ]; then
-    mv /etc/init.d/virtualbox-guest-utils /etc/init.d/virtualbox-guest-utils-VB_MOD.dpkg-distrib
+    mv /etc/init.d/virtualbox-guest-utils /etc/init.d/virtualbox-guest-utils-VB_MOD-$(date +%Y%m%H%M%S).dpkg-distrib
 fi
 
 case "$1" in
